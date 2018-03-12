@@ -2,18 +2,16 @@
 
 > This playground project is based on [webpack-splitchunks-playground](https://github.com/carloluis/webpack-splitchunks-playground)
 
-Webpack-4 `optimization.splitChunks` playground...
+__Webpack 4__ `optimization.splitChunks` playground...
 
 ## Related info
 
 * [webpack 4: Code Splitting, chunk graph and the splitChunks optimization](https://medium.com/webpack/webpack-4-code-splitting-chunk-graph-and-the-splitchunks-optimization-be739a861366)
 * [RIP CommonsChunkPlugin](https://gist.github.com/sokra/1522d586b8e5c0f5072d7565c2bee693)
 	> webpack 4 removes the `CommonsChunkPlugin` in favor of two new options (`optimization.splitChunks` and `optimization.runtimeChunk`)
-* [webpack-demo](https://github.com/carloluis/webpack-demo)
+* Check [Webpack-Demo](https://github.com/carloluis/webpack-demo) project with more __Webpack 4__ configurations.
+* More info/stats about initial project: [PR#1](https://github.com/lencioni/webpack-splitchunks-playground/pull/1)
 
-<details>
-Check more info/stats on this [PR](https://github.com/lencioni/webpack-splitchunks-playground/pull/1)
-</details>
 
 ## Tests
 
@@ -32,9 +30,15 @@ src
 └── non-core-module-b.js
 ```
 
+<details>
+
 #### Minimum Config
 
 > Using `webpack.config.entry.js` to specify entypoints
+
+```bash
+npm run build:entry
+```
 
 ```
 Hash: 09cb46e3e80b0d3d7bba
@@ -56,6 +60,10 @@ Entrypoint b = b.bundle.js
 
 > Using `webpack.config.js` (configure `optimization` property)
 
+```bash
+npm run build
+```
+
 ```
 Hash: 01d77365c8faf3592a82
 Version: webpack 4.1.1
@@ -74,3 +82,9 @@ Entrypoint coreB = vendors.bundle.js a~b~coreB.bundle.js coreB.bundle.js
 Entrypoint a = vendors.bundle.js a~b~coreA.bundle.js a~b~coreB.bundle.js a.bundle.js
 Entrypoint b = vendors.bundle.js a~b~coreA.bundle.js a~b~coreB.bundle.js b.bundle.js
 ````
+
+</details>
+
+## License
+
+MIT © [Carloluis](https://github.com/carloluis)
