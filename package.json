@@ -1,0 +1,27 @@
+{
+  "name": "webpack-optimization-splitchunks",
+  "version": "1.0.0",
+  "description": "webpack 4 optimization splitchunks playground",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carloluis/webpack-optimization-splitchunks.git"
+  },
+  "keywords": [
+    "webpack",
+    "webpack-4",
+    "optimizations",
+    "splitchunks",
+    "split-chunks",
+    "webpack-config"
+  ],
+  "author": "Carloluis Rodríguez <carloluisr@gmail.com> (https://github.com/carloluis)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carloluis/webpack-optimization-splitchunks/issues"
+  },
+  "homepage": "https://github.com/carloluis/webpack-optimization-splitchunks#readme"
+}
