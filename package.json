@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build:entry": "npm run clean && webpack --config webpack.config.entry.js",
+    "dev:entry": "webpack-dev-server --config webpack.config.entry.js",
     "build": "npm run clean && webpack",
+    "dev": "webpack-dev-server",
     "clean": "rimraf dist"
   },
   "repository": {
@@ -27,9 +29,11 @@
   },
   "homepage": "https://github.com/carloluis/webpack-optimization-splitchunks#readme",
   "devDependencies": {
+    "html-webpack-plugin": "webpack-contrib/html-webpack-plugin",
     "rimraf": "^2.6.2",
     "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.10"
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "3.1.0"
   },
   "dependencies": {
     "reformat-number": "^1.0.0"
