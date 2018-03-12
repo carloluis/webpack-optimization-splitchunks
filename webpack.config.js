@@ -11,5 +11,24 @@ module.exports = {
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
+    },
+    optimization: {
+        runtimeChunk: 'single',
+        splitChunks: {
+            chunks: 'all',
+            cacheGroups: {
+                default: {
+                    enforce: true,
+                    priority: 1
+                },
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    priority: 2,
+                    name: 'vendors',
+                    enforce: true,
+                    chunks: 'all'
+                }
+            }
+        }
     }
 };

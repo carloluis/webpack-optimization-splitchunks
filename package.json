@@ -4,7 +4,7 @@
   "description": "webpack 4 optimization splitchunks playground",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:entry": "npm run clean && webpack --config webpack.config.entry.js",
     "build": "npm run clean && webpack",
     "clean": "rimraf dist"
   },
